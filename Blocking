@@ -1,0 +1,37 @@
+`timescale 1ns / 1ps
+
+
+module BlockingExp3(x1, x2, x3, Clock, f, g);
+    input x1, x2, x3, Clock;
+    output reg f, g;
+    always @(posedge Clock)
+    begin
+    g = f | x3;
+    f = x1 & x2;
+end
+endmodule
+
+
+
+#Simulation
+`timescale 1ns / 1ps
+
+module sim_blockingExp3;
+
+    reg x1, x2, x3, Clock;
+    wire f, g;
+    BlockingExp3 uut(x1, x2, x3, Clock, f, g);
+    
+    initial 
+    begin
+    x1=0; x2=0; x3=0;Clock =0;
+    
+
+    #1 x1=1; 
+    #3 x2= 1; 
+    #5 x3= 1;
+    repeat(30)
+    #1 Clock =~ Clock;
+    
+    end
+endmodule
