@@ -22,7 +22,7 @@ module overflow (carryin, X, Y, S, carryout, overflow);
   endmodule
 
 
----Simulation-----
+//Simulation
 `timescale 1ns / 1ps
 module sim_overflow;
 
