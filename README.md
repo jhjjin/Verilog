@@ -26,17 +26,6 @@ verilog/
 ```
 
 ---
-## Common fixes / lint tips
-```
-- Top name clash: rename one of the topCounter modules (e.g., topCounter_bcd, topCounter_sync).
-- Blocking vs non-blocking: use <= for sequential logic (always @posedge).
-  Example: in Parallel.v → muxdff uses Q = D; → change to Q <= D;.
-- Integer literals: write with width/base in TBs, e.g., A = 8'b01001000; (not A=01001000; which is decimal).
-- D latch ports: prefer output reg Q; single declaration (instead of separate output Q; reg Q;).
-- Mux default: add default: f = 1'bx; in mux8to1 for safety.
-- SongPlayer note periods: constants like C4=95556.62 will be truncated to integers; verify exact integer periods for 100 MHz. 
-```
----
 ## Simulation tops
 ```
 - Set these testbench modules as the simulation top in Vivado:
