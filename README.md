@@ -50,16 +50,16 @@ verilog/
 - Counters
   BCD_Counter.v: chained BCD counters (demo). Shares topCounter name—rename if needed.
   Synchronous_Counter.v: 3-bit synchronous counter (demo). Shares topCounter name—rename if needed.
-  T_flip_flop.v: 3-bit register updated by T;
+  T_flip_flop.v: 3-bit register updated by T.
 - Seq/comb basics
-  D_Latch.v: level-sensitive D latch with En; 
+  D_Latch.v: level-sensitive D latch with En.
   Parallel.v: muxed-DFF 4-stage shift with parallel load.
-  Shift.v: 4-bit shift register using non-blocking (<=);
-  Blocking.v: blocking assignment order demo;
-  Reduction.v: ^A/~^A reduction ops;
+  Shift.v: 4-bit shift register using non-blocking (<=).
+  Blocking.v: blocking assignment order demo.
+  Reduction.v: ^A/~^A reduction ops.
   Mux_8_1.v: 8:1 mux; 
 - Arithmetic/flags
-  Overflow.v: parameterized n-bit add with carryout and signed overflow; 
+  Overflow.v: parameterized n-bit add with carryout and signed overflow;.
 - Peripherals
   SongPlayer_NexysA7.v: PWM audio on audioOut, amp enable on aud_sd=1.
   Clock assumed 100 MHz (clockFrequency = 100_000_000). Use SongPlayer_NexysA7.xdc.
